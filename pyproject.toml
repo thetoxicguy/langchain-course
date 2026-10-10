@@ -10,11 +10,13 @@ requires-python = ">=3.13"
 dependencies = [
     "langchain>=1.4.4",
     "langchain-anthropic>=1.7.5",
+    "langchain-tavily>=0.2.18",
     "python-dotenv>=1.2.4",
+    "tavily-python>=0.8.5",
 ]
 
 [project.scripts]
-langchain-course = "langchain_course:main"
+langchain-course = "langchain_course.main:main"
 
 [tool.uv]
 # Project lives on an external drive; uv's cache is on the internal disk,
