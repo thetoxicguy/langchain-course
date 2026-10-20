@@ -10,8 +10,22 @@ from langchain_tavily import TavilySearch
 
 
 llm = ChatAnthropic(model="claude-haiku-5-5")
+# tools = [search_mock]
 tools = [TavilySearch()]
 agent = create_agent(model=llm,tools=tools)
+
+# @tool
+# def search_mock(query: str) -> str:
+#     """
+#     Search for job openings using TavilySearch tool.
+#     Args:
+#         query (str): The search query.
+#         Returns:
+#         str: The search results.
+#     """
+
+#     print(f"Searching for: {query}")
+#     return "The mocked weather information for {query} is: Sunny, 25°C."
 
 def main():
     print("Hello from LangChain Course!")
