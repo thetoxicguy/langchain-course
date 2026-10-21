@@ -39,6 +39,19 @@ agent = create_agent(model=llm,tools=tools, response_format=AgentResponse)
 #     print(f"Searching for: {query}")
 #     return "The mocked weather information for {query} is: Sunny, 25°C."
 
+# @tool
+# def search_mock(query: str) -> str:
+#     """
+#     Search for job openings using TavilySearch tool.
+#     Args:
+#         query (str): The search query.
+#         Returns:
+#         str: The search results.
+#     """
+
+#     print(f"Searching for: {query}")
+#     return "The mocked weather information for {query} is: Sunny, 25°C."
+
 def main():
     print("Hello from LangChain Course!")
     result = agent.invoke({
